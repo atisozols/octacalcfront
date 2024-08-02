@@ -20,7 +20,7 @@ const Footer = () => {
             <span>alpha@alphainsurance.lv</span>
           </a>
           <a
-            href="mailto:alpha@alphainsurance.lv"
+            href="https://alphainsurance.lv"
             className="flex items-center gap-2"
           >
             <MdLanguage className="h-5 w-5" />
