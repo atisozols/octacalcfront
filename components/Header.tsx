@@ -4,7 +4,7 @@ type Props = {};
 
 const Header = (props: Props) => {
   return (
-    <header className="flex justify-center sm:justify-start m-10 mb-10">
+    <header className="flex justify-center sm:justify-start p-10">
       <Image
         className=""
         src="/octaauto_crop.png"
