@@ -1,7 +1,8 @@
 "use client";
 import PricingTable from "@/components/PricingTable";
 import Reminder from "@/components/Reminder";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 
 const Pricing = () => {
   const searchParams = useSearchParams();
@@ -9,10 +10,12 @@ const Pricing = () => {
   const vin = searchParams?.get("vin") || "";
 
   return (
-    <main className="flex flex-col gap-8 p-10">
-      <Reminder />
-      <PricingTable data={{ reg, vin }} />
-    </main>
+    <Suspense>
+      <main className="flex flex-col gap-8 p-10">
+        <Reminder />
+        <PricingTable data={{ reg, vin }} />
+      </main>
+    </Suspense>
   );
 };
 
